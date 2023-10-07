@@ -1,0 +1,4 @@
+packages:
+  - vite-config
+  - apps/*
+  - packages/*
