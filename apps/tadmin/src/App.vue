@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <t-button>确定</t-button>
-  </div>
+  <router-view />
 </template>

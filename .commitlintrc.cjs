@@ -9,9 +9,9 @@ const scopes = [...apps, ...packages, 'vite-config']
 const gitStatus = execSync('git status --porcelain || true').toString().trim().split('\n')
 
 const scopeComplete = gitStatus
-  .find((r) => ~r.indexOf('M  packages'))
+  .find((r) => ~r.indexOf('M  packages') || ~r.indexOf('M  apps'))
   ?.replace(/(\/)/g, '%%')
-  ?.match(/packages%%((\w|-)*)/)?.[1]
+  ?.match(/(packages|apps)%%((\w|-)*)/)?.[2]
 
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
