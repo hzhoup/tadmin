@@ -6,7 +6,7 @@ import type { Router } from 'vue-router'
 export function createRouterGuard(router: Router) {
   createPageLoadedGuard(router)
   createPageLoadingBarGuard(router)
-  createNprogressGuard(router)
+  createProgressGuard(router)
   createPermissionGuard(router)
   createPageTitleGuard(router)
 }
@@ -41,20 +41,24 @@ function createPageLoadingBarGuard(router: Router) {
   router.afterEach(() => {
     setTimeout(() => {
       appStore.setPageLoading(false)
-    }, 180)
+    }, 120)
 
     return true
   })
 }
 
-function createNprogressGuard(router: Router) {
+function createProgressGuard(router: Router) {
   router.beforeEach(() => {
     NProgress.start()
+
     return true
   })
 
   router.afterEach(() => {
-    NProgress.done()
+    setTimeout(() => {
+      NProgress.done()
+    }, 120)
+
     return true
   })
 }
@@ -66,5 +70,7 @@ function createPageTitleGuard(router: Router) {
     const title = to.meta.title?.[localeStore.locale]
     const subTitle = import.meta.env.VITE_APP_TITLE
     useTitle(title ? `${title} | ${subTitle}` : subTitle)
+
+    return true
   })
 }

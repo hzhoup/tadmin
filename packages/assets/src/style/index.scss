@@ -1,9 +1,9 @@
 #nprogress {
   .bar {
-    @apply bg-brand;
+    @apply bg-primary;
   }
 
   .spinner-icon {
-    @apply border-t-brand border-l-brand;
+    @apply border-t-primary border-l-primary;
   }
 }

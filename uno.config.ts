@@ -11,10 +11,10 @@ export default defineConfig({
   transformers: [transformerDirectives()],
   theme: {
     colors: {
-      brand: 'var(td-brand-color)',
-      warning: 'var(td-warning-color)',
-      error: 'var(td-error-color)',
-      success: 'var(td-success-color)'
+      primary: 'var(--td-brand-color)',
+      warning: 'var(--td-warning-color)',
+      error: 'var(--td-error-color)',
+      success: 'var(--td-success-color)'
     }
   }
 })
