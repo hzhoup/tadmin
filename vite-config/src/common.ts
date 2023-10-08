@@ -36,14 +36,14 @@ const commonConfig: UserConfig = {
     }),
     AutoImport({
       dts: existsSync(AUTO_IMPORTS_DTS) ? false : AUTO_IMPORTS_DTS,
-      imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
+      imports: ['vue', 'vue-router', 'pinia', 'vue-i18n', '@vueuse/core'],
       resolvers: [
         TDesignResolver({
           library: 'vue-next'
         })
       ],
       eslintrc: {
-        enabled: true,
+        enabled: false,
         filepath: AUTO_IMPORTS_ESLINT
       }
     }),

@@ -8,8 +8,11 @@
 
 <script setup lang="ts">
 import { useLocale } from '@tadmin/locale'
+import { subscribeStore } from '@tadmin/store'
 
 defineOptions({ name: 'TaConfigProvider' })
 
 const { getTLocale } = useLocale()
+
+subscribeStore()
 </script>
