@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider :locale="getElLocale">
+  <el-config-provider :locale="getElLocale" :button="{ autoInsertSpace: true }" :message="{ max: 4 }">
     <div v-loading.fullscreen.lock="appStore.pageLoading" class="h-full">
       <slot />
     </div>
