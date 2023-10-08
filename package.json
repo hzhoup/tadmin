@@ -16,6 +16,8 @@
     "@tadmin/locale": "workspace:*",
     "@tadmin/router": "workspace:*",
     "@tadmin/store": "workspace:*",
+    "@tadmin/ui": "workspace:*",
+    "@tadmin/utils": "workspace:*",
     "@tadmin/vite-config": "workspace:*",
     "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "^6.7.4",

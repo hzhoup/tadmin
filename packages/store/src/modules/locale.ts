@@ -14,7 +14,11 @@ export const useLocaleStore = defineStore(
       fallbackLocale: 'zh-CN'
     })
 
-    return { ...toRefs(state) }
+    function setLocale(locale: LocaleKey) {
+      state.locale = locale
+    }
+
+    return { ...toRefs(state), setLocale }
   },
   {
     persist: true

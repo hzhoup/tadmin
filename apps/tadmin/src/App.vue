@@ -1,3 +1,5 @@
 <template>
-  <router-view />
+  <ta-config-provider>
+    <router-view />
+  </ta-config-provider>
 </template>
