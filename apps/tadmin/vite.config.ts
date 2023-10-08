@@ -1,4 +1,4 @@
-import { defineApplicationConfig } from '@tadmin/vite-config'
+import { defineApplicationConfig } from '@eadmin/vite-config'
 
 export default defineApplicationConfig({
   server: {

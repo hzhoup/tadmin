@@ -1,5 +1,5 @@
-import { useAuthStoreWithOut } from '@tadmin/store'
-import type { Router, RouteLocationRaw } from 'vue-router'
+import { useAuthStoreWithOut } from '@eadmin/store'
+import type { RouteLocationRaw, Router } from 'vue-router'
 
 export function createPermissionGuard(router: Router) {
   const authStore = useAuthStoreWithOut()

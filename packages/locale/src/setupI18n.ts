@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import { useLocaleStoreWithOut } from '@tadmin/store'
+import { useLocaleStoreWithOut } from '@eadmin/store'
 import { availableLocales, setHtmlPageLang } from './helper'
 import type { App } from 'vue'
 

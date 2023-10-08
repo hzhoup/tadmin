@@ -1,11 +1,11 @@
 <template>
-  <div><t-button>404</t-button></div>
+  <div><el-button>404</el-button></div>
 </template>
 
 <route lang="yaml">
 name: PageNotFound
 meta:
   title:
-    zh-CN: 找不到页面
-    en-US: Page Not Found
+    zh-cn: 找不到页面
+    en: Page Not Found
 </route>

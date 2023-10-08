@@ -1,5 +1,5 @@
-import tLocale from 'tdesign-vue-next/es/locale/zh_CN'
+import elLocale from 'element-plus/dist/locale/zh-cn.mjs'
 
 export default {
-  tLocale
+  elLocale
 }

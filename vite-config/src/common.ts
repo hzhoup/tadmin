@@ -10,7 +10,7 @@ import Components from 'unplugin-vue-components/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
-import { TDesignResolver } from 'unplugin-vue-components/resolvers'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import type { UserConfig } from 'vite'
 
 const AUTO_IMPORTS_DTS = resolve(__dirname, '../../auto-imports.d.ts')
@@ -37,21 +37,15 @@ const commonConfig: UserConfig = {
     AutoImport({
       dts: existsSync(AUTO_IMPORTS_DTS) ? false : AUTO_IMPORTS_DTS,
       imports: ['vue', 'vue-router', 'pinia', 'vue-i18n', '@vueuse/core'],
-      resolvers: [
-        TDesignResolver({
-          library: 'vue-next'
-        })
-      ],
+      resolvers: [ElementPlusResolver()],
       eslintrc: {
-        enabled: false,
+        enabled: true,
         filepath: AUTO_IMPORTS_ESLINT
       }
     }),
     Components({
       resolvers: [
-        TDesignResolver({
-          library: 'vue-next'
-        }),
+        ElementPlusResolver(),
         IconsResolver({
           componentPrefix: 'icon',
           customCollections: ['local']

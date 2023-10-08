@@ -1,6 +1,6 @@
-import { withInstall } from '@tadmin/utils'
-import taConfigProvider from './index.vue'
+import { withInstall } from '@eadmin/utils'
+import eConfigProvider from './index.vue'
 
-export const TaConfigProvider = withInstall(taConfigProvider)
+export const EConfigProvider = withInstall(eConfigProvider)
 
-export default TaConfigProvider
+export default EConfigProvider

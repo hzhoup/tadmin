@@ -28,8 +28,8 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "@tadmin/vite-config": ["vite-config/src"],
-      "@tadmin/*": ["packages/*/src"]
+      "@eadmin/vite-config": ["vite-config/src"],
+      "@eadmin/*": ["packages/*/src"]
     }
   },
   "exclude": ["node_modules", "dist", "coverage"]

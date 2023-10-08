@@ -1,7 +1,7 @@
-import '@unocss/reset/tailwind-compat.css'
 import 'virtual:uno.css'
+import '@unocss/reset/tailwind-compat.css'
 
-import 'tdesign-vue-next/es/style/index.css'
+import 'nprogress/nprogress.css'
 
 import './style/index.scss'
 

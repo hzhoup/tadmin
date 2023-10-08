@@ -1,4 +1,4 @@
-import { LocaleKey } from '@tadmin/locale'
+import { LocaleKey } from '@eadmin/locale'
 import { store } from '../setupStore'
 
 interface LocaleState {
@@ -10,8 +10,8 @@ export const useLocaleStore = defineStore(
   'locale',
   () => {
     const state = reactive<LocaleState>({
-      locale: 'zh-CN',
-      fallbackLocale: 'zh-CN'
+      locale: 'zh-cn',
+      fallbackLocale: 'zh-cn'
     })
 
     function setLocale(locale: LocaleKey) {

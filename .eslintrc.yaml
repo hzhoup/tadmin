@@ -104,7 +104,7 @@ rules:
       - pattern: vue
         group: external
         position: before
-      - pattern: "@tadmin/**"
+      - pattern: "@eadmin/**"
         group: internal
     pathGroupsExcludedImportTypes:
       - type

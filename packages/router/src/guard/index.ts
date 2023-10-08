@@ -1,5 +1,5 @@
 import NProgress from 'nprogress'
-import { useAppStoreWithOut, useLocaleStoreWithOut } from '@tadmin/store'
+import { useAppStoreWithOut, useLocaleStoreWithOut } from '@eadmin/store'
 import { createPermissionGuard } from './permission'
 import type { Router } from 'vue-router'
 

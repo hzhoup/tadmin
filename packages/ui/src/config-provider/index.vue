@@ -1,18 +1,17 @@
 <template>
-  <t-config-provider :global-config="getTLocale">
-    <div class="h-full">
+  <el-config-provider :locale="getElLocale">
+    <div v-loading.fullscreen.lock="appStore.pageLoading" class="h-full">
       <slot />
     </div>
-  </t-config-provider>
+  </el-config-provider>
 </template>
 
 <script setup lang="ts">
-import { useLocale } from '@tadmin/locale'
-import { subscribeStore } from '@tadmin/store'
+import { useLocale } from '@eadmin/locale'
+import { useAppStore } from '@eadmin/store'
 
-defineOptions({ name: 'TaConfigProvider' })
+defineOptions({ name: 'EConfigProvider' })
 
-const { getTLocale } = useLocale()
-
-subscribeStore()
+const appStore = useAppStore()
+const { getElLocale } = useLocale()
 </script>

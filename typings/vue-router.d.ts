@@ -1,4 +1,4 @@
-import { LocaleKey } from '@tadmin/locale'
+import { LocaleKey } from '@eadmin/locale'
 import 'vue-router'
 
 declare module 'vue-router' {

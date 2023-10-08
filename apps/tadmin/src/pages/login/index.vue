@@ -6,6 +6,6 @@
 meta:
   ignoreAuth: true
   title:
-    zh-CN: 登录
-    en-US: Sign in
+    zh-cn: 登录
+    en: Sign in
 </route>

@@ -5,7 +5,7 @@
     "jsx": "preserve",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-    "types": ["tdesign-vue-next/global"]
+    "types": ["element-plus/global"]
   },
   "include": ["apps", "packages", "typings", "./auto-imports.d.ts"]
 }
