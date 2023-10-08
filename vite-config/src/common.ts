@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs'
 import Vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import Pages from 'vite-plugin-pages'
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -29,6 +30,9 @@ const commonConfig: UserConfig = {
     Pages({
       extensions: ['vue'],
       exclude: ['**/components/**/*', '**/modules/**/*']
+    }),
+    VueI18n({
+      jitCompilation: true
     }),
     AutoImport({
       dts: existsSync(AUTO_IMPORTS_DTS) ? false : AUTO_IMPORTS_DTS,

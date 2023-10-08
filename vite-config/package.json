@@ -17,6 +17,7 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^1.4.0",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "unbuild": "^2.0.0",

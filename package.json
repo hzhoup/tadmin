@@ -13,6 +13,7 @@
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@tadmin/assets": "workspace:*",
+    "@tadmin/locale": "workspace:*",
     "@tadmin/router": "workspace:*",
     "@tadmin/store": "workspace:*",
     "@tadmin/vite-config": "workspace:*",
@@ -37,6 +38,7 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.11",
     "vue": "^3.3.4",
+    "vue-i18n": "^9.5.0",
     "vue-router": "^4.2.5"
   },
   "engines": {
