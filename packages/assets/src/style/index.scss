@@ -1,0 +1,9 @@
+#nprogress {
+  .bar {
+    @apply bg-brand;
+  }
+
+  .spinner-icon {
+    @apply border-t-brand border-l-brand;
+  }
+}

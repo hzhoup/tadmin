@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.8.0",
   "scripts": {
     "cz": "czg",
     "lint": "eslint . --ext .vue,.js,.ts,.tsx,.md,.json --max-warnings 0 --cache",
@@ -20,6 +20,7 @@
     "@tadmin/utils": "workspace:*",
     "@tadmin/vite-config": "workspace:*",
     "@types/node": "*",
+    "@types/nprogress": "^0.2.1",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "@vueuse/core": "^10.5.0",
@@ -35,8 +36,10 @@
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
+    "nprogress": "^0.2.0",
     "pinia": "^2.1.6",
     "prettier": "^3.0.3",
+    "sass": "^1.69.0",
     "tdesign-vue-next": "^1.5.7",
     "typescript": "^5.2.2",
     "vite": "^4.4.11",

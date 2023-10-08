@@ -1,3 +1,4 @@
+import { LoadingPlugin } from 'tdesign-vue-next'
 import { useAppStore } from '../modules'
 
 export function subscribeAppStore() {
@@ -17,6 +18,14 @@ export function subscribeAppStore() {
         } else {
           document.documentElement.removeAttribute('theme-mode')
         }
+      },
+      { immediate: true }
+    )
+
+    watch(
+      () => appStore.pageLoading,
+      (newValue) => {
+        LoadingPlugin(newValue)
       },
       { immediate: true }
     )

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
+import { createRouterGuard } from './guard'
 import type { App } from 'vue'
 
 export const router = createRouter({
@@ -11,6 +12,8 @@ export const router = createRouter({
 
 export async function setupRouter(app: App) {
   app.use(router)
+
+  createRouterGuard(router)
 
   await router.isReady()
 }

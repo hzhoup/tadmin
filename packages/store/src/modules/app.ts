@@ -6,7 +6,12 @@ export const useAppStore = defineStore(
     const isDark = useDark()
     const toggleDark = useToggle(isDark)
 
-    return { isDark, toggleDark }
+    const pageLoading = ref(false)
+    function setPageLoading(loading: boolean) {
+      pageLoading.value = loading
+    }
+
+    return { isDark, toggleDark, pageLoading, setPageLoading }
   },
   {
     persist: true
