@@ -1,12 +1,22 @@
-import type { App, Plugin, Component, Directive } from 'vue'
+import type { AppContext, Plugin } from 'vue'
 
-export function withInstall<T>(comp: T, alias?: string, directive?: { name: string; comp: Directive<T> }): T & Plugin {
-  const componentPlugin = comp as T & Component & Plugin
+export type SFCWithInstall<T> = T & Plugin
 
-  componentPlugin.install = (app: App, name?: string) => {
-    app.component(alias || name || componentPlugin.name, comp)
-    directive && app.directive(directive.name, directive.comp)
+export type SFCInstallWithContext<T> = SFCWithInstall<T> & {
+  _context: AppContext | null
+}
+
+export const withInstall = <T, E extends Record<string, any>>(main: T, extra?: E) => {
+  ;(main as SFCWithInstall<T>).install = (app): void => {
+    for (const comp of [main, ...Object.values(extra ?? {})]) {
+      app.component(comp.name, comp)
+    }
   }
 
-  return componentPlugin as T & Plugin
+  if (extra) {
+    for (const [key, comp] of Object.entries(extra)) {
+      ;(main as any)[key] = comp
+    }
+  }
+  return main as SFCWithInstall<T> & E
 }
