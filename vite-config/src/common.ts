@@ -62,7 +62,10 @@ const commonConfig: UserConfig = {
       }
     }),
     UnoCSS()
-  ]
+  ],
+  optimizeDeps: {
+    include: ['element-plus/dist/locale/zh-cn.min', 'element-plus/dist/locale/en.min']
+  }
 }
 
 export default commonConfig
