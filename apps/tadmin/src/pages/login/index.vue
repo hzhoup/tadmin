@@ -1,13 +1,13 @@
 <template>
-  <div class="px-4 relative">
-    <el-space class="h-12 absolute top-0 right-0">
+  <div class="h-screen px-4 flex flex-col items-center">
+    <div class="h-12 w-full flex items-center justify-end">
       <e-toggle-lang />
       <e-toggle-mode />
-    </el-space>
+    </div>
 
-    <main>
+    <div class="w-full max-w-420px">
       <login-form />
-    </main>
+    </div>
   </div>
 </template>
 
