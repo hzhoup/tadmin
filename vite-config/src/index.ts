@@ -1,12 +1,14 @@
 import { resolve } from 'node:path'
-import { defineConfig, mergeConfig } from 'vite'
+import { defineConfig, loadEnv, mergeConfig } from 'vite'
+import { viteMockServe } from 'vite-plugin-mock'
 import commonConfig from './common'
 import type { UserConfig } from 'vite'
 
 export function defineApplicationConfig(options: UserConfig = {}) {
-  return defineConfig(async ({ command }) => {
+  return defineConfig(async ({ command, mode }) => {
     const root = process.cwd()
     const isBuild = command === 'build'
+    const { VITE_USE_MOCK } = loadEnv(mode, root)
 
     const pathResolve = (pathname: string) => resolve(root, '.', pathname)
 
@@ -37,7 +39,14 @@ export function defineApplicationConfig(options: UserConfig = {}) {
             }
           }
         }
-      }
+      },
+      plugins: [
+        viteMockServe({
+          ignore: /^_/,
+          mockPath: 'mock',
+          enable: VITE_USE_MOCK === 'true'
+        })
+      ]
     }
 
     const mergedConfig = mergeConfig(commonConfig, applicationConfig)

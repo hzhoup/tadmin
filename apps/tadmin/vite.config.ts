@@ -7,8 +7,7 @@ export default defineApplicationConfig({
       '/api': {
         ws: true,
         changeOrigin: true,
-        target: 'http://localhost:3031',
-        rewrite: (path: string) => path.replace(/^\/api/, '')
+        target: 'http://localhost:3031'
       }
     }
   }

@@ -7,5 +7,6 @@
     "skipLibCheck": true,
     "types": ["element-plus/global"]
   },
-  "include": ["apps", "packages", "typings", "./auto-imports.d.ts"]
+  "include": ["apps", "packages", "typings", "./auto-imports.d.ts"],
+  "exclude": ["apps/**/vite.config.*"]
 }
